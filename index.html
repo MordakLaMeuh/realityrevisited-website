@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>RealityRevisited</title>
+    <link rel="shortcut icon" href="images/ours.png" />
+
+    <link rel='stylesheet' id='fontawesome-css'  href='css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='custom_css-css'  href='css/custom.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='combined_css-css'  href='css/combined.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='index-css'  href='css/index.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='grid-css'  href='css/grid.css' type='text/css' media='all' />
+
+    <script type='text/javascript' src='jquery/jquery.js'></script>
+    <script type='text/javascript' src='jquery/jquery-migrate.min.js'></script>
+
+    <script type='text/javascript' src='js/combined_hack.js'></script>
+
+    <script type='text/javascript' src='js/startup_tools.js'></script>
+
+    <script type='text/javascript' src='js/ajax.js'></script>
+    <script type='text/javascript' src='js/controls.js'></script>
+    <script type='text/javascript' src='js/tools.js'></script>
+    <script type='text/javascript' src='js/preloadAndDisplay.js'></script>
+    <script type='text/javascript' src='js/loadAllStuff.js'></script>
+</head>
+
+<body ondragstart="return false;" ondrop="return false;" class="home page page-id-1762 page-template page-template-gallery_archive-php" data-style="blog_grid" onload="loadAllStuff()">
+
+<input type="hidden" id="pp_enable_right_click" name="pp_enable_right_click" value="false"/>
+
+<!-------------------------------------------------- DEFINITION DU MENU DEROULANT -------------------------------------------------->
+
+<div id="menu_close_icon">
+    <div id="menu_toggle"></div>
+    <div id="menu_title">Menu</div>
+</div>
+
+<div class="top_bar">
+
+    <div class="top_bar_wrapper">
+        <div id="menu_wrapper">
+            <a id="custom_logo" class="logo_wrapper" href=".">
+        		<img src='images/LOGO-REALITY-09.12.jpg' alt='' width='200' height='130'/>
+            </a>
+
+            <div id="nav_wrapper">
+                <div class="nav_wrapper_inner">
+                    <div id="menu_border_wrapper">
+                        <div class="menu-main-menu-container">
+
+    <ul id="main_menu" class="nav">
+
+        <li id="menu-item-0" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children arrow menu-item-0">
+            <a onClick='getHome(0)' class='ajaxLink'>Home</a>
+        </li>
+
+        <li id="menu-item-1" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children arrow menu-item-1">
+            <a class="arrowLink">Gallery</a>
+            <ul class="sub-menu">
+	            <li id='menu-item-100' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-100'><a class='ajaxLink' onClick='getGallery(0)'>BLAST</a></li>
+	            <li id='menu-item-101' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-101'><a class='ajaxLink' onClick='getGallery(1)'>BEDROCK</a></li>
+	            <li id='menu-item-102' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-102'><a class='ajaxLink' onClick='getGallery(2)'>Polhymnie</a></li>
+	            <li id='menu-item-103' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-103'><a class='ajaxLink' onClick='getGallery(3)'>Substance</a></li>
+	            <li id='menu-item-104' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-104'><a class='ajaxLink' onClick='getGallery(4)'>MADJUKA</a></li>
+	            <li id='menu-item-105' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-105'><a class='ajaxLink' onClick='getGallery(5)'>CLEANSED</a></li>
+	            <li id='menu-item-106' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-106'><a class='ajaxLink' onClick='getGallery(6)'>Madame rêve</a></li>
+	            <li id='menu-item-107' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-107'><a class='ajaxLink' onClick='getGallery(7)'>ASPHALT</a></li>
+	            <li id='menu-item-108' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-108'><a class='ajaxLink' onClick='getGallery(8)'>Mesmerism</a></li>
+	            <li id='menu-item-109' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-109'><a class='ajaxLink' onClick='getGallery(9)'>Portraits</a></li>
+	            <li id='menu-item-110' class='menu-item menu-item-type-taxonomy menu-item-object-gallerycat menu-item-110'><a class='ajaxLink' onClick='getGallery(10)'>TAGS</a></li>
+            </ul>
+        </li>
+
+        <li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children arrow menu-item-4">
+            <a class="arrowLink">Vidéos</a>
+            <ul class="sub-menu">
+                <li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a class='ajaxLink' id='page_maximize_video' onClick="play_video()">Watermarks</a></li>
+            </ul>
+        </li>
+
+        <li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children arrow menu-item-5">
+            <a class='ajaxLink' onClick="contact()">CONTACT</a>
+        </li>
+    </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!------------------------------------ BEGIN MAIN CONTENT ------------------------------------>
+
+<div id="background_picture">
+    <noscript>
+        <div id='page_header_bg' style='background-image:url(images/background.jpg);'></div>
+    </noscript>
+</div>
+
+<a id="homeIcon" class='ajaxLink' onClick='getHome(1)'>
+    <img src="images/Icon-House.gif" alt="maison">
+</a>
+
+<div class='page_control_static'>
+    <a id='page_maximize' class='ajaxLink'></a>
+</div>
+
+<div id="statusTXT">
+    <!-- ...................................................... -->
+</div>
+
+<div id="wrapper">
+
+    <div id="homeContener" style="display:none">
+        <div id="page_content_wrapper" class="two nopadding gallery">
+            <div class="inner">
+                <div class="inner_wrapper">
+                    <div id="blog_grid_wrapper">
+
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail BLIGHT'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(0)'>
+            <img src='' alt='BLIGHT' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='BLIGHT'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>BLAST</h6>
+                                <span>Sag Negativ Nein</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail BREAT'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(1)'>
+            <img src='' alt='BREAT' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='BREAT'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>BEDROCK</h6>
+                                <span>Never the Same Stream</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail muses'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(2)'>
+            <img src='' alt='muses' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='muses'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>Polhymnie</h6>
+                                <span>Precarious theatre</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail Vigroux'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(3)'>
+            <img src='' alt='Vigroux' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='Vigroux'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>Substance</h6>
+                                <span>Echoes from Silence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail MADJUKA'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(4)'>
+            <img src='' alt='MADJUKA' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='MADJUKA'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>MADJUKA</h6>
+                                <span>Scruter les humains</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail CLEANSED'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(5)'>
+            <img src='' alt='CLEANSED' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='CLEANSED'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>CLEANSED</h6>
+                                <span>Optical Sound</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail Birth'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(6)'>
+            <img src='' alt='Birth' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='Birth'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>Madame rêve</h6>
+                                <span>un jour, je sourirai moins...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail Asphalt'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(7)'>
+            <img src='' alt='Asphalt' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='Asphalt'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>ASPHALT</h6>
+                                <span>Urban Metal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail Mesmerism'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(8)'>
+            <img src='' alt='Mesmerism' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='Mesmerism'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>Mesmerism</h6>
+                                <span>Fragments d'un discours amoureux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail Portraits'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(9)'>
+            <img src='' alt='Portraits' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='Portraits'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>Portraits</h6>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class='wall_entry type-post post gallery masonry element wall_thumbnail TAGS'>
+            <a class='arrowLink hiddenTab' onClick='getGallery(10)'>
+            <img src='' alt='TAGS' class='portfolio_img static'/>
+                <div class='mask'>
+                    <div class='mask_frame'>
+                        <ul class='gallery_img_slides' id='TAGS'>
+
+                        </ul>
+                        <div class='mask_image_content hascycle'>
+                            <div class='mask_image_content_frame'>
+                                <h6>TAGS</h6>
+                                <span>Innovation forcée</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="galeryContener">
+        <table id="horizontal_gallery_wrapper" cellspacing="0">
+            <tr id="zoneGalery">
+
+            </tr>
+        </table>
+    </div>
+
+    <div id="contactContener" style="display:none">
+
+        <div style="background-color:#000;">
+            <table CELLPADDING="10" CELLSPACING="10" style="width: 90%; margin-left:auto; margin-right:auto;">
+                <caption><img width="98%" src="./medias/R.menu.R.jpg"/></caption>
+                <thead>
+                    <tr style="background-color:#2F3534; color:white; font-family:arial;">
+                        <th style="width:33%">COMMUNICATION VISUELLE</th>
+                        <th style="width:33%">WEBDESIGN</th>
+                        <th style="width:33%">SCENE CONTEMPORAINE</th>
+                    </tr>
+                </thead>
+
+                <tbody >
+                    <tr style="color: #323539; font-family: Helvetica;" align="justify" valign="top">
+                        <td><b> En cours de construction </b> Ei mea omnes mandamus consulatu. Sit ut omnium discere, regione nominati scriptorem vix eu,
+                        cu ius copiosae indoctum.  Ne sit wisi utinam, vidisse fierent appetere eam cu. Id vim iriure recusabo,
+                        quas omnesque at mea, cu dicat qua"erendum disputando vis. Ex sed quaeque fabulas appellantur, legimus nonumes assueverit an
+                        ius, ex quo posse meliore disputationi. </td>
+                        <td rowspan="2">Est adhuc similique <b> en cours de construction </b> suscipiantur te,  ex accusam fierent comprehensam mei. Ex mel tale case, sed ne suas
+                        justo percipitur, fugit vidisse mei eu. Tollit vidisse dolorum ea mel, numquam gubergren sadipscing id eam. Volumus liberavisse per ut,
+                        nibh error everti cu sed. Dicit disputando quo ad, veri mazim pro at. Vix eu summo numquam, stet deseruisse
+                        has ei. Detracto moderatius eum in, an sadipscing voluptatibus eos. Stet elit senserit vis ea, et tollit postea putent ius, tantas sensibus et mea.
+                        Est dico lorem definitiones ex. Per admodum nostrum adipiscing ea. Duo copiosae vulputate
+                        sadipscing ex, error commodo nec id, ad eum quando alterum invenire.Sea error dicunt definitiones eu, pri quot oratio quodsi in, usu etiam scribentur id.
+                        Reque accumsan vix et, eos in ipsum consulatu sententiae. Fugit dolores voluptua cu per, mel prima commune deleniti ne. Cum fuisset liberavisse ne.</td>
+                        <td rowspan="2">Meliore vocibus placerat <b> en cours de construction </b> eos an, sed reque soleat constituto ex, eu
+                        pro alii prima urbanitas. Solum lorem epicurei ius te, ad vel esse persius imperdiet.
+                        Id fugit voluptaria accommodare eos, pro ex quem nonumy, et affert habemus pro.
+                        Noluisse interpretaris sea ut. Ei pri exerci impedit insolens, ex quo explicari principes
+                        intellegebat. Quo suas assueverit contentiones te. Mea et tale etiam commune, ne quis vocibus
+                        officiis qui, in est bonorum ancillae insolens. Ius virtute definitiones ex, option scaevola
+                        vituperatoribus cu his. Per admodum nostrum adipiscing ea. Duo copiosae vulputate
+                        sadipscing ex, error commodo nec id, ad eum quando alterum invenire. Nobis volutpat duo in, at pri iracundia vituperatoribus.
+                        Habeo vitae urbanitas cum cu. </td>
+                    </tr>
+                    <tr>
+                        <td valign="bottom" style="vertical-allign:bottom;"><img width="100%" src="./medias/carotte.jpg"/></td>
+                    </tr>
+                    <tr align="center">
+                        <td STYLE="font-family: Helvetica; font-size: 24px; color: #B00000; font-weight: bold;">Les carottes sont cuites</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+
+                <tfoot align="center">
+                    <tr>
+                        <td colspan="3" STYLE="font-family: Helvetica; font-size: 15px; color: white; font-weight: bold;">mentions légales</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <div id="videoContener" style="display:none">
+        <video id='video' autoplay='true'>
+            <source src='' type='video/webm' />
+        </video>
+    </div>
+
+    <noscript>
+        <div class="javaScriptNeeded">Vous devez activer JavaScript pour découvrir mon site.</div>
+    </noscript>
+
+</div>
+
+        <div id="toTop" class="withbg">
+            <i class="fa  fa-arrow-up"></i>
+        </div>
+<!------------------------------------------ END OF CONTENT -------------------------------------->
+
+<script type="text/javascript">
+
+var zoneHome   = document.getElementById("blog_grid_wrapper");
+var zoneGalery = document.getElementById("zoneGalery");
+
+function directory(name, where, state) {      // => Champ des différents dossiers, emplacements des photos, nom & état télécharg& ou non.
+  this.name = name;
+  this.where = where;
+  this.state = state;
+}
+var directoryName = new Array();
+var directoryNumber = 0;                      // => Exprime le numéro du dossier courant en téléchargement.
+                                              // => PHP envoit à JS tous les noms des fichiers photos dans ./photos., toutes stockés dans un tableau Images en JS
+var Images = new Array("photos/BLIGHT/060.jpg","photos/BLIGHT/135.jpg","photos/BLIGHT/03.jpg","photos/BLIGHT/399.jpg","photos/BLIGHT/04.jpg","photos/BLIGHT/01.jpg","photos/BREAT/4187_1130350988899_4568967_n.jpg","photos/BREAT/4187_1130350188879_7666210_n.jpg","photos/BREAT/4187_1130350308882_7448222_n.jpg","photos/BREAT/4187_1130350548888_7779524_n.jpg","photos/BREAT/4187_1130350228880_702122_n.jpg","photos/BREAT/4187_1130351028900_4312982_n.jpg","photos/BREAT/4187_1130350268881_249745_n.jpg","photos/BREAT/4187_1130350508887_3414717_n.jpg","photos/BREAT/4187_1130350908897_3229933_n.jpg","photos/BREAT/4187_1130350668891_1703764_n.jpg","photos/muses/B11.jpg","photos/muses/B5.jpg","photos/muses/B12.jpg","photos/muses/B3.jpg","photos/muses/B6.jpg","photos/muses/B4.jpg","photos/muses/B2.jpg","photos/muses/B9.jpg","photos/muses/B1.jpg","photos/muses/B8.jpg","photos/muses/B13.jpg","photos/muses/B15.jpg","photos/muses/B14.jpg","photos/muses/B10.jpg","photos/Vigroux/A3.jpg","photos/Vigroux/A2.jpg","photos/Vigroux/A4.jpg","photos/MADJUKA/Photo283.jpg","photos/MADJUKA/Photo296.jpg","photos/MADJUKA/Photo282.jpg","photos/MADJUKA/Photo237.jpg","photos/CLEANSED/Ajoutcascade.jpg","photos/CLEANSED/163026_1703427155445_883851_n.jpg","photos/CLEANSED/164299_1703426555430_8225374_n.jpg","photos/CLEANSED/156732_1703426755435_74857_n.jpg","photos/CLEANSED/Watery-Lux-25.jpg","photos/Birth/09.jpg","photos/Birth/DSC04854.jpg","photos/Birth/07.jpg","photos/Birth/539380_4124105670895_101772414_n.jpg","photos/Birth/DSC04819.jpg","photos/Birth/06.jpg","photos/Birth/10.jpg","photos/Birth/11.jpg","photos/Birth/08.jpg","photos/Birth/05.jpg","photos/Asphalt/PARISB13.jpg","photos/Asphalt/IMG6.jpg","photos/Asphalt/PARISB01.jpg","photos/Asphalt/PARISB12.jpg","photos/Asphalt/PARISB14.jpg","photos/Mesmerism/duo2.jpg","photos/Mesmerism/duo4.jpg","photos/Mesmerism/duo3.jpg","photos/Mesmerism/duo5.jpg","photos/Portraits/BREAT.jpg","photos/TAGS/270569_4700731366177_1559927791_n.jpg","photos/TAGS/TAG-FINAL.jpg","");
+Images.pop();
+directoryName[0]=new directory; directoryName[0].where=0; directoryName[0].name="BLIGHT";
+directoryName[1]=new directory; directoryName[1].where=6; directoryName[1].name="BREAT";
+directoryName[2]=new directory; directoryName[2].where=16; directoryName[2].name="muses";
+directoryName[3]=new directory; directoryName[3].where=30; directoryName[3].name="Vigroux";
+directoryName[4]=new directory; directoryName[4].where=33; directoryName[4].name="MADJUKA";
+directoryName[5]=new directory; directoryName[5].where=37; directoryName[5].name="CLEANSED";
+directoryName[6]=new directory; directoryName[6].where=42; directoryName[6].name="Birth";
+directoryName[7]=new directory; directoryName[7].where=52; directoryName[7].name="Asphalt";
+directoryName[8]=new directory; directoryName[8].where=57; directoryName[8].name="Mesmerism";
+directoryName[9]=new directory; directoryName[9].where=61; directoryName[9].name="Portraits";
+directoryName[10]=new directory; directoryName[10].where=62; directoryName[10].name="TAGS";
+
+var logoIMG = "images/LOGO-REALITY-09.12.jpg";
+var mainPicture = "images/background.jpg";
+
+var allLoaded = false;                        // => True lorsque toutes les photos ont été chargées.
+var blockDownloadAgent = false;               // => True lorsque qu'une demande de galerie concerne des photos pas encores chargés, change la prio du téléchargement.
+
+var statusTXT = document.getElementById("statusTXT");
+var level;              /* Contient une valeur correspondante à l'endroit ou se trouve l'utilisateur dans le site.
+                        0 : Est sur le home
+                        1 : Visionnage de gallerie
+                        2 : Court-métrages.
+                        3 : ContactMe
+                        Fullscreen mode : cf ligne 6637 du fichier ./cache/combined.js  */
+var ScrollLevel = 0;
+
+InitControls();
+
+var verifyHeight = (function()
+{
+    var lastHeigth = window.innerHeight;
+
+    function verify_height()                          // Fonction appelée pèriodiquement pour réajuster les images et la vidéo à la résolution d'écran.
+    {
+        if (window.innerHeight != lastHeigth)
+        {
+            lastHeigth = window.innerHeight;
+            var elements = document.getElementsByClassName("img_size");
+            for (var i=0 ; i<elements.length ; i++)     elements[i].style.height = (lastHeigth +0)+"px";
+        }
+        if (level == 2)
+        {
+            var video = document.getElementById("video");
+            video.style.height = lastHeigth+"px";
+        }
+    }
+    var intervalRefreshMsg = setInterval(function(){verify_height();}, 200);
+
+    return function()
+    {};
+})();
+</script>
+
+    </body>
+</html>

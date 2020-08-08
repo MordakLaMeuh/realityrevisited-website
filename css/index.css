@@ -1,0 +1,184 @@
+/*Bricolage de derrière les fagots pour rendre invisible la barre de défilement qui est très laide */
+body
+{
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+b
+{
+    font-weight:bold;
+}
+
+#wrapper
+{
+    overflow-y:hidden;
+}
+
+.top_bar
+{
+    width: 228px;
+    top: 0px;
+    overflow: hidden;
+}
+
+.top_bar_wrapper
+{
+    overflow: auto;
+    margin-top: 20px;   /* Afin d'éviter que l'image du logo se cogne contre le bord haut de l'écran - marge intèrieur = 20px. */
+    margin: 5px;
+}
+
+#video
+{
+    height:400px;
+}
+
+a.ajaxLink  {
+    cursor: pointer;
+            }
+
+a.arrowLink {
+    cursor: default;
+            }
+
+.galleryBodyStyle
+{
+    background:transparent;
+    right:23px;
+    padding:0;
+    font-size:18px;
+    min-height:100%;
+    background:#fff;
+    /*opacity:0.3;*/
+}
+
+#homeIcon
+{
+    top:27px;
+    right:60px;
+    position:fixed;
+    z-index:999;
+    visibility:hidden;
+}
+
+#statusTXT
+{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    position: fixed;
+    top: 10px;
+    right: 200px;
+    font-size: 20px;
+    z-index:999;
+
+    opacity: 0;
+    filter: alpha(opacity=100);
+    -webkit-transition: opacity 0.5s ease-in-out;
+       -moz-transition: opacity 0.5s ease-in-out;
+        -ms-transition: opacity 0.5s ease-in-out;
+         -o-transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
+}
+
+#blog_grid_wrapper .post.type-post.visibleSpeedyRabbit
+{
+    animation-name:fadeIn;
+    -webkit-animation-name:fadeIn;
+    animation-duration:0.3s;
+    -webkit-animation-duration:0.3s;
+    animation-timing-function:ease-in-out;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+#menu_close_icon,body #menu_close_icon{background:transparent;}
+#menu_close_icon:hover,body #menu_close_icon:hover{background:#fff;}
+#menu_close_icon {background:#fff;}
+
+/* Fixation du bug du thème original par déplacement de la croix de fermeture */
+
+body.js_nav #menu_close_icon{background:transparent;-webkit-transform:translate(170px,0px);-ms-transform:translate(170px,0px);-moz-transform:translate(170px,0px);-o-transform:translate(170px,0px);transform:translate(170px,0px);}body.js_nav #menu_close_icon:hover{color:transparent !important;}
+#menu_close_icon:hover,body[data-style=fullscreen] #menu_close_icon:hover,body[data-style=flow] #menu_close_icon:hover,body[data-style=password] #menu_close_icon:hover,body[data-style=wall] #menu_close_icon:hover,body[data-style=horizontal] #menu_close_icon:hover{background:#fff;}
+#menu_title{margin-top:0px;text-transform:uppercase;font-size:9px;font-weight:bold;position:absolute;top:50%;width:100%;text-align:center;}#menu_toggle{font-size:30px;display:block;margin:auto;width:20px;margin-left:18px;height:2px;background:#fff;position:absolute;top:50%;margin-top:-14px;}
+#menu_close_icon:hover #menu_toggle,#menu_close_icon:hover #menu_toggle:before,#menu_close_icon:hover #menu_toggle:after{background:#000;}
+body.js_nav #menu_toggle{background:transparent !important;}
+#menu_toggle:after,#menu_toggle:before{content:'';position:absolute;width:100%;height:2px;background:#fff;left:0;-webkit-transform-origin:center center;-moz-transform-origin:center center;-ms-transform-origin:center center;-o-transform-origin:center center;transform-origin:center center;}
+body.js_nav #menu_toggle:before{-webkit-transform:rotate(45deg) translate(4px,9px);-moz-transform:rotate(45deg) translate(3px,8px);-ms-transform:rotate(45deg) translate(3px,8px);-o-transform:rotate(45deg) translate(3px,8px);transform:rotate(45deg) translate(3px,8px);background:#000 !important;}body.js_nav #menu_toggle:after{-webkit-transform:rotate(-45deg) translate(2px,-8px);-moz-transform:rotate(-45deg) translate(3px,-8px);-ms-transform:rotate(-45deg) translate(3px,-8px);-o-transform:rotate(-45deg) translate(3px,-8px);transform:rotate(-45deg) translate(3px,-8px);background:#000 !important;}
+#menu_toggle:before,body.js_nav #menu_close_icon:hover #menu_toggle:before{top:-6px;}
+#menu_close_icon:hover #menu_toggle:before{top:-10px;}
+#menu_toggle:after{bottom:-6px;}
+body.js_nav #menu_close_icon #menu_toggle:after{bottom:-9px;}
+
+
+body.js_nav #homeIcon{display:none;}
+/* body.js_nav #page_maximize{display:none;} */
+
+#menu_close_icon
+{
+    padding: 0px;
+    margin: 0px;
+}
+                    /* ligne 291 de combined.css */
+#page_header_bg
+{
+    width:408px;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    z-index:0;
+    -webkit-transition:all 500ms ease;
+    transition:all 500ms ease;
+    -moz-transition:all 500ms ease;-webkit-font-smoothing:antialiased;
+    min-height:100%;
+    background-position:center center;
+    background-size:cover;
+
+    body.js_nav #page_header_bg{opacity:.2;}
+}
+
+body.js_nav #wrapper,body.js_nav #supersized,body.js_nav #imageFlow,body.js_nav .backstretch{-webkit-transform:translate(230px,0px);-ms-transform:translate(230px,0px);-moz-transform:translate(230px,0px);-o-transform:translate(230px,0px);transform:translate(230px,0px);opacity:0.2;}
+body.js_nav #page_header_bg {-webkit-transform:translate(230px,0px);-ms-transform:translate(230px,0px);-moz-transform:translate(230px,0px);-o-transform:translate(230px,0px);transform:translate(230px,0px);opacity:1.0;}
+/*  */
+.contactMe
+{
+    color:#fff;
+    font-style: italic;
+    font-style: bold;
+    font-size: 40px;
+    font-family: Helvetica, "Trebuchet MS","Times New Roman";
+}
+
+.javaScriptNeeded
+{
+    color:#f00;
+    font-family: Helvetica, "Trebuchet MS","Times New Roman";
+    font-size: 30px;
+    text-align : center;
+}
+
+
+/*** Gestion d'un bug de firefox : Normalement pour le slide la position doit être "absolute" mais ceco ralentit tellement firefox que j'ai fais passer en "relative",
+    ... ainsi, pour le déclenchement du slide(), les images concernées passeront en absolute le temps du slide() -> cf. PreloadAndDisplay                         ***/
+
+.mask_frame ul li
+{
+    position: relative;
+    opacity: 0;
+    filter: alpha(opacity=100);
+    -webkit-transition: opacity 0.5s ease-in-out;
+       -moz-transition: opacity 0.5s ease-in-out;
+        -ms-transition: opacity 0.5s ease-in-out;
+         -o-transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
+}
+
+#video      /* <dib align='center' ne fonctionnant pas correctement (bloquant la fleche de remontée automatique).. CSS permet de placer la vid au centre */
+{
+    display: block;
+    margin: 0 auto;
+}
