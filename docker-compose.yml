@@ -1,0 +1,10 @@
+web:
+  image: nginx
+  volumes:
+   - ./web:/usr/share/nginx/html
+   - ./templates:/etc/nginx/templates
+  ports:
+   - "80:80"
+  environment:
+   - NGINX_PORT=80
+
