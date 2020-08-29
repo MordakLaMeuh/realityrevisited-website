@@ -4,6 +4,11 @@ server {
         root   /usr/share/nginx/html;
         index  index.html;
         try_files $uri /index.html;
+	sub_filter '</head>'  '
+    		<meta property="og:image" content="https://i.ytimg.com/vi/TpQ4zuqUX9Y/maxresdefault.jpg">
+    		<meta property="og:image:width" content="1280">
+    		<meta property="og:image:height" content="720">
+		</head>';
     }
 }
 
