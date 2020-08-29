@@ -3,7 +3,10 @@ server {
     location / {
         root   /usr/share/nginx/html;
         index  index.html;
-        try_files $uri /index.html;
+	    sub_filter '</head>'  '
+            <meta property="og:image" content="$arg_img">
+        </head>';
+        try_files $uri /index.html?img=$arg_img;
     }
 }
 

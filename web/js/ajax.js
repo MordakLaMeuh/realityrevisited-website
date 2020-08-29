@@ -5,6 +5,9 @@ var getHome = (function()                                   // Génération du h
 
     return function(fromHouse)
     {
+        let url = '?img=' + window.location.host + '/images/background.jpg';
+        history.replaceState(null, '', url);
+
         level = 0;
         document.getElementById("contactContener").style.display = "none";
         document.getElementById("galeryContener").style.display = "none";
@@ -105,6 +108,10 @@ function getGallery(number)
 
     document.getElementById("wrapper").scrollTop = 0;
 
+    let url = '?img=' + window.location.host + '/' + Images[directoryName[number].where + 0];
+    console.info(url);
+    history.replaceState(null, '', url);
+
     function renderVisibilityPicture()
     {
         if (blockDownloadAgent == true) return;
@@ -143,6 +150,9 @@ function play_video()
 
 function contact()                                 // Ouveture de l'écran me contacter.
 {
+    let url = '?img=' + window.location.host + '/medias/carotte.jpg';
+    history.replaceState(null, '', url);
+
     document.getElementById("galeryContener").style.display = "none";
     document.getElementById("homeContener").style.display = "none";
     document.getElementById("videoContener").style.display = "none";
